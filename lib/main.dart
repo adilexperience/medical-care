@@ -1,8 +1,8 @@
 import 'package:care/utils/app_colors.dart';
-import 'package:care/views/search_screen.dart';
+import 'package:care/views/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: AppColors.primaryColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: SearchScreen(),
+      home: LoginScreen(),
     );
   }
 }

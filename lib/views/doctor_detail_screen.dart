@@ -1,5 +1,6 @@
 import 'package:care/models/doctor_model.dart';
 import 'package:care/utils/app_colors.dart';
+import 'package:care/views/rating_screen.dart';
 import 'package:flutter/material.dart';
 
 class DoctorDetailScreen extends StatefulWidget {
@@ -78,22 +79,29 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
           ),
         ),
       ),
-      floatingActionButton: Container(
-        decoration: BoxDecoration(
-          color: AppColors.primaryColor,
-          borderRadius: BorderRadius.circular(
-            15.0,
+      floatingActionButton: InkWell(
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => RateScreen(),
           ),
         ),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 40.0,
-          vertical: 12.0,
-        ),
-        child: Text(
-          "Book appointment now",
-          style: TextStyle(
-            color: AppColors.appWhiteColor,
-            fontSize: 20.0,
+        child: Container(
+          decoration: BoxDecoration(
+            color: AppColors.primaryColor,
+            borderRadius: BorderRadius.circular(
+              15.0,
+            ),
+          ),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 40.0,
+            vertical: 12.0,
+          ),
+          child: Text(
+            "Book appointment now",
+            style: TextStyle(
+              color: AppColors.appWhiteColor,
+              fontSize: 20.0,
+            ),
           ),
         ),
       ),

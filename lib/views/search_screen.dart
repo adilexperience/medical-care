@@ -28,7 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search"),
+        title: Text("Explore and get treatment"),
       ),
       drawer: Container(),
       body: SingleChildScrollView(
