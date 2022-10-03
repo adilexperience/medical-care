@@ -190,6 +190,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     shrinkWrap: true,
                     itemCount: getItemLength(),
                     scrollDirection: Axis.vertical,
+                    physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       ListingModel _listingMode =
                           getSelectedFilterList()[index];
